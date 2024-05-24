@@ -1,3 +1,5 @@
+/*--------------body start------------------*/
+
 body {
   margin: 0;
   background-image: url("../image/background.jpg");
@@ -6,15 +8,20 @@ body {
   background-attachment: fixed; /* 背景图片固定，不随内容滚动 */
 }
 
+/*--------------body End------------------*/
+
+/*--------------Header Start------------------*/
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 5vh;
+  height: 8vh;
+  max-height: 8vh;
+  min-height: 60px;
   background-color: rgba(255, 255, 255, 0.459); /* 半透明背景颜色 */
   border-bottom: 1px solid #2423239c; /* 可以添加底部邊框效果 */
-  box-shadow: 0 20px 8px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
   z-index: 100;
 }
 
@@ -23,7 +30,6 @@ header {
   justify-content: space-around;
   align-items: center;
   height: 100%;
-  padding: 0 20px; /* 根據需要調整左右邊距 */
 }
 
 .logo-container {
@@ -33,30 +39,30 @@ header {
   height: 100%;
   width: auto;
 }
-.logo-container img {
-  width: auto;
-  height: 100%;
-}
 .logo-container p {
   display: flex;
   align-items: center;
   margin: 0;
+  cursor: pointer;
   width: auto;
   height: 100%;
   font-family: "Poetsen One", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 30px;
+  font-size: 40px;
+}
+.logo-container img {
+  width: auto;
+  height: 100%;
+  cursor: auto;
 }
 
 .function-column {
-  display: flex;
   width: 80%;
 }
 
 .menu-toggle {
   display: none;
-  cursor: pointer;
 }
 
 .menu-items {
@@ -65,42 +71,20 @@ header {
   width: 100%;
 }
 
-.pet-shop {
-  font-family: "Noto Sans TC", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
-}
-
-.friendly-map {
-  font-family: "Noto Sans TC", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
-}
-
-.pet-adopt {
-  font-family: "Noto Sans TC", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
-}
-
-.pet-community {
-  font-family: "Noto Sans TC", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
-}
-
+.pet-shop,
+.friendly-map,
+.pet-adopt,
+.pet-community,
 .member-center {
   font-family: "Noto Sans TC", sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
+  cursor: pointer;
+  font-size: 25px;
 }
-
-@media screen and (max-width: 920px) {
+/*--------------Header  RWD------------------*/
+@media screen and (max-width: 1024px) {
   .menu-items,
   .menu-items div {
     display: none;
@@ -108,94 +92,108 @@ header {
 
   .menu-toggle {
     display: block;
-    width: 80%;
+    width: auto;
+    cursor: pointer;
     font-family: "Noto Sans TC", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
+    text-align: center;
+    font-size: 25px;
   }
   .function-column {
-    justify-content: flex-end;
-    width: 20%;
+    display: flex;
+    justify-content: center;
+    width: 20vw;
   }
   .logo-container {
-    width: 80%;
+    width: 80vw;
   }
 }
+/*--------------Header End------------------*/
 
-main {
-  position: relative;
-  top: 5vh;
-  bottom: 2vh;
-  margin: 0px;
+/*--------------Main Start------------------*/
+ main {
+  position: absolute;
+  top: 8vh;
+  bottom: 9vh;
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.image-map-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image-map-container img {
+  position: absolute;
+  object-fit: contain;
+}
+
+.image-shop {
+  top: 0;
+  left: 0;
+  width: 80%; /* 放大圖片 */
+  height: 80%; /* 放大圖片 */
+}
+
+.image-map {
+  top: 0;
+  right: 0;
+  width: 80%; /* 放大圖片 */
+  height: 80%; /* 放大圖片 */
+}
+
+.image-adopt {
+  bottom: 0;
+  left: 0;
+  width: 80%; /* 放大圖片 */
+  height: 80%; /* 放大圖片 */
+}
+
+.image-community {
+  bottom: 0;
+  right: 0;
+  width: 80%; /* 放大圖片 */
+  height: 80%; /* 放大圖片 */
+}
+
+.image-dog {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%; /* 放大圖片 */
+  height: vmin(100%); /* 放大圖片 */
+}
+
+/*--------------Main End------------------*/
+
+/*--------------footer Start------------------*/
 footer {
   position: fixed;
   bottom: 0;
-  left: 0;
-  width: 100vw;
-  height: 2vh;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 9vh;
   background-color: #333;
   color: #fff;
-  padding: 20px;
   z-index: 100;
 }
-/*-----------------------------*/
-#one {
-  position: fixed;
-  border: #333 5px solid;
-  background: #cc1313;
-  width: 50vh;
-  height: 30vh;
-  top: 5vh;
-  left: 0;
+.footer-container {
+  text-align: center;
 }
+.fb-icon,
+.line-icon,
+.mail-icon {
+  margin: 0 5px;
+  cursor: pointer;
+}
+/*--------------Footer end------------------*/
 
-#two {
-  position: fixed;
-  border: #333 5px solid;
-  background: #14b94b;
-  width: 50vh;
-  height: 30vh;
-  top: 5vh;
-  right: 0;
-}
-
-#three {
-  position: fixed;
-  border: #333 5px solid;
-  background: blue;
-  width: 55vh;
-  height: 75vh;
-  bottom: 2vh;
-  left: 70vh;
-}
-
-#four {
-  position: fixed;
-  border: #333 5px solid;
-  background: #831bac;
-  width: 50vh;
-  height: 30vh;
-  bottom: 2vh;
-  left: 0;
-}
-
-#five {
-  position: fixed;
-  border: #333 5px solid;
-  background: #d8db22;
-  width: 50vh;
-  height: 30vh;
-  bottom: 2vh;
-  right: 0;
-}
-.test1 {
-  display: flex;
-  justify-content: space-between;
-}
-.test2 {
-  display: flex;
-  justify-content: space-between;
-}
-/*-----------------------------*/
+/*--------------Test------------------*/
