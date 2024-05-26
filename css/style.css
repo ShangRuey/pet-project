@@ -1,21 +1,21 @@
 /*--------------body start------------------*/
-
 body {
   margin: 0;
   background-image: url("../image/background.jpg");
   background-size: cover; /* 讓圖片完全縮放填滿背景區(可能有部分區塊被裁切 */
   background-position: center; /* 讓圖片置中，從中間縮放的感覺 */
   background-attachment: fixed; /* 背景图片固定，不随内容滚动 */
+  height: 100vh; /* 确保 body 高度占满视口 */
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
-
 /*--------------body End------------------*/
 
 /*--------------Header Start------------------*/
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
+  flex: 0 0 auto;
+  width: 100%;
   height: 8vh;
   max-height: 8vh;
   min-height: 60px;
@@ -39,6 +39,7 @@ header {
   height: 100%;
   width: auto;
 }
+
 .logo-container p {
   display: flex;
   align-items: center;
@@ -51,10 +52,10 @@ header {
   font-style: normal;
   font-size: 40px;
 }
+
 .logo-container img {
   width: auto;
   height: 100%;
-  cursor: auto;
 }
 
 .function-column {
@@ -84,6 +85,7 @@ header {
   cursor: pointer;
   font-size: 25px;
 }
+
 /*--------------Header  RWD------------------*/
 @media screen and (max-width: 1024px) {
   .menu-items,
@@ -102,27 +104,24 @@ header {
     text-align: center;
     font-size: 25px;
   }
+
+  .logo-container {
+    width: 60%;
+  }
+
   .function-column {
     display: flex;
     justify-content: center;
-    width: 20vw;
-  }
-  .logo-container {
-    width: 60vw;
+    width: 20%;
   }
 }
 /*--------------Header End------------------*/
 
 /*--------------Main Start------------------*/
- main {
-  position: absolute;
-  top: 8vh;
-  bottom: 9vh;
+main {
+  flex: 1 0 auto;
   width: 100%;
-  overflow: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: auto; /* 确保内容溢出时能够滚动 */
 }
 
 .image-map-container {
@@ -136,62 +135,64 @@ header {
   object-fit: contain;
 }
 
+.image-shop,.image-map,.image-adopt,.image-community{
+  /*border: #333 solid 5px;*/
+  box-sizing: border-box;
+  width: 20%;
+  height: 40%;
+}
+
 .image-shop {
-  top: 0;
-  left: 0;
-  width: 80%; /* 放大圖片 */
-  height: 80%; /* 放大圖片 */
+  top: 5%;
+  left: 16%;
 }
 
 .image-map {
-  top: 0;
-  right: 0;
-  width: 80%; /* 放大圖片 */
-  height: 80%; /* 放大圖片 */
+  top: 5%;
+  right: 16%;
 }
 
 .image-adopt {
-  bottom: 0;
-  left: 0;
-  width: 80%; /* 放大圖片 */
-  height: 80%; /* 放大圖片 */
+  bottom: 5%;
+  left: 16%;
 }
 
 .image-community {
-  bottom: 0;
-  right: 0;
-  width: 80%; /* 放大圖片 */
-  height: 80%; /* 放大圖片 */
+  bottom: 5%;
+  right: 16%;
 }
 
 .image-dog {
+  box-sizing: border-box;
+  /*border: #333 solid 5px;*/
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 80%; /* 放大圖片 */
-  height: vmin(100%); /* 放大圖片 */
+  width: 25%;
+  height: 90%;
 }
-
 /*--------------Main End------------------*/
 
-/*--------------footer Start------------------*/
+/*--------------Footer Start------------------*/
 footer {
-  position: fixed;
-  bottom: 0;
+  flex: 0 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 9vh;
-  min-height: 70px;
+  height: 10vh;
+  max-height: 10vh;
+  min-height: 60px;
   background-color: #333;
   color: #fff;
   z-index: 100;
 }
+
 .footer-container {
   text-align: center;
-  font-size: 20px;
+  font-size: 15px;
 }
+
 .fb-icon,
 .line-icon,
 .mail-icon {
@@ -199,5 +200,3 @@ footer {
   cursor: pointer;
 }
 /*--------------Footer end------------------*/
-
-/*--------------Test------------------*/
