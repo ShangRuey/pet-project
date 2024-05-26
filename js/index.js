@@ -3,6 +3,7 @@ const logoContainer = document.querySelector(".logo-container");
 const menuItems = document.querySelector(".menu-items");
 const connection = document.querySelector(".connection");
 const menuToggle = document.querySelector(".menu-toggle");
+const imageMapContainer = document.querySelector(".image-map-container");
 /*----------------------------Header----------------------------*/
 
 //首頁logo 跳轉進首頁
@@ -43,7 +44,13 @@ menuItems.addEventListener("click", (t) => {
 /*----------------------------Header----------------------------*/
 
 /*----------------------------Main----------------------------*/
-
+imageMapContainer.addEventListener("click", (t) =>{
+  
+  console.log(t.target.className)
+  if(t.target.className === 'image-shop-test'){
+    console.log(123)
+  }
+})
 /*----------------------------Main----------------------------*/
 
 /*----------------------------Footer----------------------------*/
