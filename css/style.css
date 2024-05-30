@@ -2,10 +2,10 @@
 body {
   margin: 0;
   background-image: url("../image/background.jpg");
-  background-size: cover; /* 讓圖片完全縮放填滿背景區(可能有部分區塊被裁切 */
-  background-position: center; /* 讓圖片置中，從中間縮放的感覺 */
-  background-attachment: fixed; /* 背景图片固定，不随内容滚动 */
-  height: 100vh; /* 确保 body 高度占满视口 */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -19,10 +19,11 @@ header {
   height: 8vh;
   max-height: 8vh;
   min-height: 60px;
-  background-color: rgba(255, 255, 255, 0.459); /* 半透明背景颜色 */
-  border-bottom: 1px solid #2423239c; /* 可以添加底部邊框效果 */
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
+  background-color: rgba(255, 255, 255, 0.459);
+  border-bottom: 1px solid #2423239c;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
   z-index: 100;
+  color: #4A2C2A;
 }
 
 .nav-bar {
@@ -51,6 +52,7 @@ header {
   font-weight: 400;
   font-style: normal;
   font-size: 40px;
+  color: #F4A261;
 }
 
 .logo-container img {
@@ -84,6 +86,7 @@ header {
   font-style: normal;
   cursor: pointer;
   font-size: 25px;
+  color: #4A2C2A;
 }
 
 /*--------------Header  RWD------------------*/
@@ -121,7 +124,7 @@ header {
 main {
   flex: 1 0 auto;
   width: 100%;
-  overflow: auto; /* 确保内容溢出时能够滚动 */
+  overflow: auto;
 }
 
 .image-map-container {
@@ -171,6 +174,7 @@ main {
   width: 25%;
   height: 90%;
 }
+
 /*--------------Main End------------------*/
 
 /*--------------Footer Start------------------*/
@@ -184,13 +188,14 @@ footer {
   max-height: 10vh;
   min-height: 60px;
   background-color: #333;
-  color: #fff;
+  color: #fff8f1;
   z-index: 100;
 }
 
 .footer-container {
   text-align: center;
   font-size: 15px;
+   color: #fff8f1;
 }
 
 .fb-icon,
@@ -198,5 +203,6 @@ footer {
 .mail-icon {
   margin: 0 5px;
   cursor: pointer;
+  color: #fff8f1;
 }
 /*--------------Footer end------------------*/
