@@ -175,6 +175,78 @@ main {
   height: 90%;
 }
 
+/* Register main Start */
+.center-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.form-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  min-width: 200px; /* 最小宽度 */
+  max-width: 400px; /* 最大宽度 */
+  width: 80%; /* 使用百分比宽度 */
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-title {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  text-align: center;
+  color: #4A2C2A;
+}
+
+.register-label {
+  margin: 10px 0;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #4A2C2A;
+}
+
+.register-input {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-width: 200px;
+  width: 200px;
+}
+
+.register-submit {
+  background-color: #333;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 50%;
+}
+
+.register-submit:hover {
+  background-color: #555;
+}
+/* Register main End */
+
+
 /*--------------Main End------------------*/
 
 /*--------------Footer Start------------------*/
