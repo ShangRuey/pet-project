@@ -190,9 +190,9 @@ main {
   padding: 20px;
   border-radius: 10%;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  min-width: 200px; /* 最小宽度 */
-  max-width: 400px; /* 最大宽度 */
-  width: 80%; /* 使用百分比宽度 */
+  min-width: 350px; /* 最小宽度 */
+  max-width: 800px; /* 最大宽度 */
+  width: 50%; /* 使用百分比宽度 */
 }
 
 .register-form {
@@ -226,7 +226,8 @@ main {
   border: 1px solid #ccc;
   border-radius: 5px;
   min-width: 200px;
-  width: 200px;
+  max-width: 500px;
+  width: 40%;
 }
 
 .register-submit {
@@ -234,15 +235,26 @@ main {
   color: white;
   font-size: 18px;
   font-weight: bold;
+  margin-top: 10px;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  min-width: 200px;
+  max-width: 400px;
   width: 50%;
 }
 
 .register-submit:hover {
   background-color: #555;
+}
+
+.have-account {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  text-align: center;
+  color: #4A2C2A;
 }
 /* Register main End */
 
