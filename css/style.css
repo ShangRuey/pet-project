@@ -167,7 +167,6 @@ main {
 
 .image-dog {
   box-sizing: border-box;
-  /*border: #333 solid 5px;*/
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -175,7 +174,7 @@ main {
   height: 90%;
 }
 
-/* Register main Start */
+/* 註冊 登入 相關 start */
 .center-wrapper {
   display: flex;
   justify-content: center;
@@ -184,24 +183,39 @@ main {
   width: 100%;
 }
 
-.form-container {
-  background-color: rgba(255, 255, 255, 0.8);
+.form-container,.login-container,.forget-container {
+  background-color: rgba(247, 197, 105, 0.6);
   margin: 20px 0;
   padding: 20px;
   border-radius: 10%;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  min-width: 350px; /* 最小宽度 */
-  max-width: 800px; /* 最大宽度 */
-  width: 50%; /* 使用百分比宽度 */
+  box-shadow: 0 0 50px rgba(209, 88, 7, 0.727);
+  min-width: 350px;
+  max-width: 800px;
+  width: 50%;
 }
 
-.register-form {
+.login-container,.forget-container{
+  width:auto
+}
+.forget-container{
+  height: 50%;
+  max-width: 400px;
+  min-width: 350px;
+  min-height: 350px;
+}
+
+.register-form,.login-form,.forget-form{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.register-title {
+.forget-form{
+  justify-content: center;
+  height: 80%;
+}
+
+.register-title,.login-title,.forget-title{
   margin: 0;
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 900;
@@ -210,7 +224,7 @@ main {
   color: #4A2C2A;
 }
 
-.register-label {
+.register-label,.login-label,.forget-label{
   margin: 10px 0;
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 500;
@@ -218,7 +232,7 @@ main {
   color: #4A2C2A;
 }
 
-.register-input {
+.register-input,.login-input,.forget-input{
   font-size: 20px;
   font-weight: 800;
   margin-bottom: 10px;
@@ -227,10 +241,10 @@ main {
   border-radius: 5px;
   min-width: 200px;
   max-width: 500px;
-  width: 40%;
+  width: 70%;
 }
 
-.register-submit {
+.register-submit,.login-submit,.forget-submit{
   background-color: #333;
   color: white;
   font-size: 18px;
@@ -245,19 +259,67 @@ main {
   width: 50%;
 }
 
-.register-submit:hover {
+.register-submit:hover,.login-submit:hover,.forget-submit:hover{
   background-color: #555;
 }
 
 .have-account {
+  margin: 10px;
+}
+
+.register-login,#forget-password{
+  margin: 5px 0;
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 900;
-  font-size: 40px;
+  font-size: 25px;
   text-align: center;
   color: #4A2C2A;
 }
-/* Register main End */
+/* 註冊 登入 相關 End */
 
+/*驗證相關*/
+.verification-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  
+}
+
+.verification-button {
+  background-color: #333;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  min-width: 200px;
+  max-width: 400px;
+  width: 50%;
+}
+
+.verification-button:hover {
+  background-color: #555;
+}
+
+.verification-form, .reset-password-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+}
+
+.new-password{
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  color: rgba(226, 34, 92, 0.781);
+}
 
 /*--------------Main End------------------*/
 
@@ -290,3 +352,5 @@ footer {
   color: #fff8f1;
 }
 /*--------------Footer end------------------*/
+
+
