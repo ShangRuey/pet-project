@@ -1,114 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Roboto:wght@900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@800&display=swap"
-      rel="stylesheet"
-    />
-    <title>註冊會員</title>
-  </head>
-  <body>
-     <header>
-      <nav class="nav-bar">
-        <div class="logo-container">
-          <p class="logo-item">
-            <img src="../image/dog.png" class="logo-item" alt="logo" />BlackDog
-          </p>
-        </div>
-        <div class="function-column">
-          <label class="menu-toggle">☰</label>
-          <div class="menu-items">
-            <div class="pet-shop">用品商店</div>
-            <div class="friendly-map">友善地圖</div>
-            <div class="pet-adopt">認養相關</div>
-            <div class="pet-community">狗狗社群</div>
-            <div class="member-center">會員中心</div>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <div class="center-wrapper">
-        <div class="form-container">
-          <form class="register-form" id="register-form">
-              <h2 class="register-title">註冊會員</h2>
-              <!-- Username Field -->
-              <label for="username" class="register-label">帳號 (必填)</label>
-              <input type="text" id="username" maxlength="14" pattern="[A-Za-z0-9]+" class="register-input" required />
-
-              <!-- Password Field -->
-              <label for="password" class="register-label">密碼 (必填)</label>
-              <input type="password" id="password" pattern="[A-Za-z0-9]{1,20}" maxlength="16" title="由大小寫字母或數字、長度在1-20字數" class="register-input" required />
-
-              <!-- Email Field -->
-              <label for="email" class="register-label">電子郵件 (必填)</label>
-              <input type="email" id="email" maxlength="30" class="register-input" pattern="[A-Za-z0-9@.]+" required />
-
-              <!-- Phone Number Field -->
-              <label for="phone" class="register-label">手機 (必填)</label>
-              <input type="tel" id="phone" maxlength="10" class="register-input" pattern="^09\d{8}$" title="手機需以09開頭，共10位數" required/>
-
-              <!-- City Dropdown -->
-              <label class="register-label">城市</label>
-              <select class="register-input" required>
-                  <option value="" selected>選擇城市</option>
-                  <option value="">預設1</option>
-                  <!-- Add more options as needed -->
-              </select>
-
-              <!-- District Dropdown -->
-              <label class="register-label">區</label>
-              <select class="register-input" required>
-                  <option value="">選擇區</option>
-                  <option value="">預設1</option>
-                  <!-- Add more options as needed -->
-              </select>
-
-              <!-- Road Dropdown -->
-              <label class="register-label">路</label>
-              <select class="register-input" required>
-                  <option value="">選擇路</option>
-                  <option value="">預設1</option>
-                  <!-- Add more options as needed -->
-              </select>
-
-              <!-- Address Field -->
-              <label for="address" class="register-label">詳細地址</label>
-              <input type="text" id="address" maxlength="12" pattern="[\u4e00-\u9fa5A-Za-z0-9]+" class="register-input" required/>
-
-              <!-- Submit Button -->
-              <button type="submit" class="register-submit">註冊</button>
-          </form>
-          <div class="have-account">
-            <p>已有會員?<a href="./login.html">登入</a></p>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Roboto:wght@900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@800&display=swap" rel="stylesheet" />
+  <title>註冊會員</title>
+</head>
+<body>
+  <header>
+    <nav class="nav-bar">
+      <div class="logo-container">
+        <p class="logo-item">
+          <img src="../image/dog.png" class="logo-item" alt="logo" />BlackDog
+        </p>
+      </div>
+      <div class="function-column">
+        <label class="menu-toggle">☰</label>
+        <div class="menu-items">
+          <div class="pet-shop">用品商店</div>
+          <div class="friendly-map">友善地圖</div>
+          <div class="pet-adopt">認養相關</div>
+          <div class="pet-community">狗狗社群</div>
+          <div class="member-center">會員中心</div>
         </div>
       </div>
-    </main>
-     <footer>
-      <div class="footer-container">
-        <div class="connection">
-          聯絡資訊：<i class="fa-brands fa-facebook fb-icon"></i>
-          <i class="fa-brands fa-line line-icon"></i>
-          <i class="fa-solid fa-envelope mail-icon"></i>
-        </div>
-        <div class="copyright-icon">&copy; 2024 Shang</div>
-      </div>
-    </footer>
-    <script src="../js/header.js"></script>
-    <script src="../js/register.js"></script>
-    <script src="../js/footer.js"></script>
-    <script
-      src="https://kit.fontawesome.com/b564b46eba.js"
-      crossorigin="anonymous"
-    ></script>
+    </nav>
+  </header>
+  <main>
+    <div class="center-wrapper">
+      <div class="form-container">
+        <form class="register-form" id="register-form">
+          <h2 class="register-title">註冊會員</h2>
+          <div class="error-message"></div>
+        
+          <!-- Username Field -->
+          <label for="username" class="register-label">
+            帳號
+            <span class="required">*</span>
+          </label>
+          <input type="text" id="username" maxlength="14" pattern="[A-Za-z0-9]+" class="register-input" required />
 
-  </body>
+          <!-- Password Field -->
+          <label for="password" class="register-label">
+            密碼
+            <span class="required">*</span>
+          </label>
+          <input type="password" id="password" pattern="[A-Za-z0-9]{1,16}" maxlength="16" title="由大小寫字母或數字、長度在1-16字數" class="register-input" required />
+
+          <!-- Email Field -->
+          <label for="email" class="register-label">
+            電子郵件
+            <span class="required">*</span>
+            <span id="email-verification-icon"></span>
+          </label>
+          <div class="email-verification">
+            <input type="email" id="email" maxlength="30" class="register-input" pattern="[A-Za-z0-9@.]+" required />
+            <button type="button" id="email-verify-btn" class="register-ver">發送</button>
+          </div>
+          <div class="email-code-verification">
+            <input type="text" id="email-code" maxlength="6" class="register-input" pattern="[0-9]{6}" />
+            <button type="button" id="email-code-verify-btn" class="register-ver">驗證</button>
+          </div>
+
+          <!-- Phone Number Field -->
+          <label for="phone" class="register-label">
+            手機
+            <span class="required">*</span>
+            <span id="phone-verification-icon"></span>
+          </label>
+          <div class="phone-verification">
+            <input type="tel" id="phone" maxlength="10" class="register-input" pattern="^09\d{8}$" title="手機需以09開頭，共10位數" required/>
+            <button type="button" id="phone-verify-btn" class="register-ver">發送</button>
+          </div>
+          <div class="phone-code-verification">
+            <input type="text" id="phone-code" maxlength="6" class="register-input" pattern="[0-9]{6}" />
+            <button type="button" id="phone-code-verify-btn" class="register-ver">驗證</button>
+          </div>
+
+          <!-- City Dropdown -->
+          <label class="register-label">
+            城市 
+            <span class="required">*</span>
+          </label>
+          <select class="register-input" required>
+            <option value="" selected>選擇城市</option>
+            <option value="">預設1</option>
+            <!-- Add more options as needed -->
+          </select>
+
+          <!-- District Dropdown -->
+          <label class="register-label">
+            區 
+            <span class="required">*</span>
+          </label>
+          <select class="register-input" required>
+            <option value="">選擇區</option>
+            <option value="">預設1</option>
+            <!-- Add more options as needed -->
+          </select>
+
+          <!-- Road Dropdown -->
+          <label class="register-label">
+            路 
+            <span class="required">*</span>
+          </label>
+          <select class="register-input" required>
+            <option value="">選擇路</option>
+            <option value="">預設1</option>
+            <!-- Add more options as needed -->
+          </select>
+
+          <!-- Address Field -->
+          <label for="address" class="register-label">
+            詳細地址 
+            <span class="required">*</span>
+          </label>
+          <input type="text" id="address" maxlength="12" pattern="[\u4e00-\u9fa5A-Za-z0-9]+" class="register-input" required/>
+
+          <!-- Submit Button -->
+          <button type="submit" class="register-submit">註冊</button>
+        </form>
+        <div class="have-account">
+          <p class="register-login">已有會員?<a href="./login.html">登入</a></p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <div class="connection">
+        聯絡資訊：<i class="fa-brands fa-facebook fb-icon"></i>
+        <i class="fa-brands fa-line line-icon"></i>
+        <i class="fa-solid fa-envelope mail-icon"></i>
+      </div>
+      <div class="copyright-icon">&copy; 2024 Shang</div>
+    </div>
+  </footer>
+  <script src="../js/header.js"></script>
+  <script src="../js/register.js"></script>
+  <script src="../js/footer.js"></script>
+  <script src="https://kit.fontawesome.com/b564b46eba.js" crossorigin="anonymous"></script>
+</body>
 </html>
