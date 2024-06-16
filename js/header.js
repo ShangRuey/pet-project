@@ -1,37 +1,65 @@
-//設定 dom 變數
-const logoContainer = document.querySelector(".logo-container");
-const menuItems = document.querySelector(".menu-items");
-const menuToggle = document.querySelector(".menu-toggle");
+/// 設定 DOM 變數
+const navBar = document.querySelector(".nav-bar");
 
-//首頁logo 跳轉進首頁
-logoContainer.addEventListener("click", (t) => {
-  const className = t.target.className;
-  className === "logo-item"
-    ? (window.location.href = "./index.html")
-    : console.log("nothing");
-});
+// 定義頁面跳轉函數
+function navigateTo(url) {
+  window.location.href = url;
+}
 
-//導覽列各分頁跳轉
-menuItems.addEventListener("click", (t) => {
-  const className = t.target.className;
+// 生成 header 內容
+function displayHeader() {
+  navBar.innerHTML = `
+    <div class="logo-container">
+      <p class="logo-item">
+        <img src="../image/dog.png" class="logo-item" alt="logo" />BlackDog
+      </p>
+    </div>
+    <div class="function-column">
+      <div class="menu-toggle">        
+        <p class="menu-p">登入</p>
+      </div>
+      <div class="menu-items">
+        <div class="pet-shop">用品商店</div>
+        <div class="friendly-map">友善地圖</div>
+        <div class="pet-adopt">認養相關</div>
+        <div class="pet-community">狗狗社群</div>
+        <div class="member-center">會員中心</div>
+      </div>
+    </div>`;
+}
+
+displayHeader();
+
+// 事件處理函數
+function handleNavigation(event) {
+  const className = event.target.className;
 
   switch (className) {
+    case "logo-item":
+      navigateTo("./index.html");
+      break;
     case "pet-shop":
-      window.location.href = "./shop.html";
+      navigateTo("./shop.html");
       break;
     case "friendly-map":
-      window.location.href = "./map.html";
+      navigateTo("./map.html");
       break;
     case "pet-adopt":
-      window.location.href = "./adopt.html";
+      navigateTo("./adopt.html");
       break;
     case "pet-community":
-      window.location.href = "./community.html";
+      navigateTo("./community.html");
       break;
     case "member-center":
-      window.location.href = "./member.html";
+      navigateTo("./member.html");
+      break;
+    case "menu-p":
+      navigateTo("./login.html");
       break;
     default:
       console.log("nothing");
   }
-});
+}
+
+// 事件委託: 將事件監聽添加到 navBar
+navBar.addEventListener("click", handleNavigation);
