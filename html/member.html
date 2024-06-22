@@ -19,26 +19,51 @@
   <body>
     <header>
       <nav class="nav-bar">
-        <div class="logo-container">
-          <p class="logo-item">
-            <img src="../image/dog.png" class="logo-item" alt="logo" />BlackDog
-          </p>
-        </div>
-        <div class="function-column">
-          <label class="menu-toggle">☰</label>
-          <div class="menu-items">
-            <div class="pet-shop">用品商店</div>
-            <div class="friendly-map">友善地圖</div>
-            <div class="pet-adopt">認養相關</div>
-            <div class="pet-community">狗狗社群</div>
-            <div class="member-center">會員中心</div>
-          </div>
-        </div>
       </nav>
     </header>
     <main>
-      <div class="member-container">
-        
+      <div class="main-container">
+        <aside class="aside-container">
+          <div class="function-aside">
+            <div class="menu-item" data-content="profile">修改會員資料</div>
+            <div class="menu-item" data-content="community">訂單查詢</div>
+            <div class="menu-item" data-content="orders">追蹤名單</div>
+          </div>
+        </aside>
+        <div class="member-content">
+          <h2 id="content-title">修改會員資料</h2>
+          <form class="content-body">
+            <label class="update-label">會員ID：</label>
+            <input class="update-input" type="text">
+            <label class="update-label">密碼：</label>
+            <input class="update-input" type="text">
+            <button class="update-btn">更改密碼</button>
+            <label class="update-label">電子郵件：</label>
+            <input class="update-input" type="text">
+            <button class="update-btn" >更改電子郵件</button>
+            <label class="update-label">手機：</label>
+            <input class="update-input" type="text">
+            <button class="update-btn" >更改手機號碼</button>
+            <label class="update-label">城市</label>
+            <select class="update-select" required>
+              <option value="" selected>選擇城市</option>
+              <option value="">預設1</option>
+            </select>
+            <label class="update-label">區</label>
+            <select class="update-select" required>
+              <option value="">選擇區</option>
+              <option value="">預設1</option>
+            </select>
+            <label class="update-label">路</label>
+            <select class="update-select" required>
+              <option value="">選擇路</option>
+              <option value="">預設1</option>
+            </select>
+            <label class="update-label">詳細地址</label>
+            <input type="text" class="update-input" id="address" maxlength="12" pattern="[\u4e00-\u9fa5A-Za-z0-9]+" required/>
+            <button class="update-btn" type="submit">修改</button>
+          </form>
+        </div>
       </div>
     </main>
     <footer>
