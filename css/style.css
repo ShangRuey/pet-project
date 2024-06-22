@@ -162,7 +162,7 @@ main {
   width: 100%;
   overflow: auto;
 }
-
+/*------Index Start------*/
 .image-map-container {
   position: relative;
   width: 100%;
@@ -209,8 +209,8 @@ main {
   width: 25%;
   height: 90%;
 }
-
-/* 註冊 登入 相關 start */
+/*------Index End------*/
+/*------Register Login Start------*/
 .center-wrapper {
   display: flex;
   justify-content: center;
@@ -357,7 +357,125 @@ main {
 .error-icon, .verify-error {
   color: red;
 }
-/* 註冊 登入 相關 End */
+/*------Register Login End------*/
+
+
+/*------Member Start------*/
+.main-container {
+  width:100%;
+  height: 100%;
+  display: flex;
+}
+
+.aside-container {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.function-aside {
+  padding: 20px 15px;
+  box-sizing: border-box;
+  width: 85%;
+  height: 95%;
+  background-color: rgb(146, 245, 190,0.4);
+  box-shadow: 0 0px 30px rgb(113, 255, 213);
+  border-radius: 25%;
+}
+
+.menu-item {
+  padding: 10px;
+  margin: 0 10px;
+  width: 75%;
+  cursor: pointer;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.menu-item:hover {
+  background-color: rgba(174, 255, 174, 0.973);
+  color: rgba(255, 187, 97, 0.959);
+}
+
+.member-content {
+  box-sizing: border-box;
+  width: 85%;
+  height: 100%;
+  padding: 20px;
+}
+
+.member-content, .content-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-body {
+  width: 70%;
+  height: 95%;
+  justify-content: space-between;
+  background-color: rgba(247, 197, 105, 0.6);
+  border-radius: 10%;
+  box-shadow: 0 0 50px rgba(209, 88, 7, 0.727);
+}
+
+#content-title {
+  margin-top: 0;
+  width: 50%;
+  height: auto;
+  text-align: center;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  background-color: rgba(247, 197, 105, 0.6);
+  box-shadow: 0 0 30px rgba(209, 88, 7, 0.727);
+  border-radius: 10%;
+}
+
+.update-label {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 900;
+  font-size: 25px;
+  height: auto;
+  width: 50%;
+  text-align: center;
+}
+
+.update-input {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 900;
+  font-size: 15px;
+  text-align: center;
+  width: 30%;
+  height: auto;
+  border-radius: 3%;
+}
+
+.update-btn{
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  width: 20%;
+  height: auto;
+  border-radius: 5%;
+  background-color: #333;
+  color: white;
+}
+
+.update-select{
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 900;
+  font-size: 15px;
+  width: 20%;
+  height: auto;
+}
+/*------Member End------*/
+
+
 
 /*驗證相關*/
 .verification-options {
