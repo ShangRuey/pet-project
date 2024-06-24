@@ -16,7 +16,8 @@ function displayHeader() {
     </div>
     <div class="function-column">
       <div class="menu-toggle">        
-        <p class="menu-p">登入</p>
+        <p class="menu-login">登入</p>
+        <p class="menu-register">註冊</p>
       </div>
       <div class="menu-items">
         <div class="pet-shop">用品商店</div>
@@ -53,9 +54,12 @@ function handleNavigation(event) {
     case "member-center":
       navigateTo("./member.html");
       break;
-    case "menu-p":
+    case "menu-login":
       navigateTo("./login.html");
       break;
+    case "menu-register":
+      navigateTo("./register.html");
+      break;  
     default:
       console.log("nothing");
   }
