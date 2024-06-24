@@ -26,43 +26,50 @@
         <aside class="aside-container">
           <div class="function-aside">
             <div class="menu-item" data-content="profile">修改會員資料</div>
-            <div class="menu-item" data-content="community">訂單查詢</div>
-            <div class="menu-item" data-content="orders">追蹤名單</div>
+            <div class="menu-item" data-content="community">社群追蹤</div>
+            <div class="menu-item" data-content="orders">交易紀錄</div>
           </div>
         </aside>
         <div class="member-content">
-          <h2 id="content-title">修改會員資料</h2>
-          <form class="content-body">
-            <label class="update-label">會員ID：</label>
-            <input class="update-input" type="text">
-            <label class="update-label">密碼：</label>
-            <input class="update-input" type="text">
-            <button class="update-btn">更改密碼</button>
-            <label class="update-label">電子郵件：</label>
-            <input class="update-input" type="text">
-            <button class="update-btn" >更改電子郵件</button>
-            <label class="update-label">手機：</label>
-            <input class="update-input" type="text">
-            <button class="update-btn" >更改手機號碼</button>
-            <label class="update-label">城市</label>
-            <select class="update-select" required>
-              <option value="" selected>選擇城市</option>
-              <option value="">預設1</option>
-            </select>
-            <label class="update-label">區</label>
-            <select class="update-select" required>
-              <option value="">選擇區</option>
-              <option value="">預設1</option>
-            </select>
-            <label class="update-label">路</label>
-            <select class="update-select" required>
-              <option value="">選擇路</option>
-              <option value="">預設1</option>
-            </select>
-            <label class="update-label">詳細地址</label>
-            <input type="text" class="update-input" id="address" maxlength="12" pattern="[\u4e00-\u9fa5A-Za-z0-9]+" required/>
-            <button class="update-btn" type="submit">修改</button>
-          </form>
+          <div class="member-title">
+            <h2 id="content-title">修改會員資料</h2>
+          </div>
+          <div class="member-body">
+            <div class="content-body">
+              <form class="update-form">
+                <label class="update-label">會員ID：</label>
+                <input class="update-input" type="text">
+                <label class="update-label">密碼：</label>
+                <input class="update-input" type="text">
+                <button class="update-btn">更改密碼</button>
+                <label class="update-label">電子郵件：</label>
+                <input class="update-input" type="text">
+                <button class="update-btn">更改電子郵件</button>
+                <label class="update-label">手機：</label>
+                <input class="update-input" type="text">
+                <button class="update-btn">更改手機號碼</button>
+                <label class="update-label">城市</label>
+                <select class="update-select" required>
+                  <option value="" selected>選擇城市</option>
+                  <option value="">預設1</option>
+                </select>
+                <label class="update-label">區</label>
+                <select class="update-select" required>
+                  <option value="">選擇區</option>
+                  <option value="">預設1</option>
+                </select>
+                <label class="update-label">路</label>
+                <select class="update-select" required>
+                  <option value="">選擇路</option>
+                  <option value="">預設1</option>
+                </select>
+                <label class="update-label">詳細地址</label>
+                <input type="text" class="update-input" id="address" maxlength="12" pattern="[\u4e00-\u9fa5A-Za-z0-9]+" required/>
+                <button class="update-btn" type="submit">修改</button>
+              </form>
+
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -76,6 +83,18 @@
         <div class="copyright-icon">&copy; 2024 Shang</div>
       </div>
     </footer>
+     <!-- 模态窗口 -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-title">交易詳細資訊</h2>
+        <div id="modal-products"></div>
+        <p id="modal-total-price"></p>
+        <p id="modal-method"></p>
+        <p id="modal-time"></p>
+        <button id="contact-us" class="contact-btn">聯絡我們</button>
+      </div>
+    </div>
     <script src="../js/header.js"></script>
     <script src="../js/member.js"></script>
     <script src="../js/footer.js"></script>
