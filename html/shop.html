@@ -4,7 +4,68 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Roboto:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@800&display=swap"
+      rel="stylesheet"
+    />
     <title>用品商店</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav class="nav-bar">
+      </nav>
+    </header>
+    <main>
+      <div class="main-container">
+        <aside class="aside-container">
+          <div class="function-aside">
+                <div class="menu-item collapsible" data-content="category1">種類1</div>
+                <div class="submenu">
+                    <div class="submenu-item" data-content="category1-1">種類1-1</div>
+                    <div class="submenu-item" data-content="category1-2">種類1-2</div>
+                </div>
+                <div class="menu-item" data-content="category2">種類2</div>
+                <div class="menu-item" data-content="category3">種類3</div>
+          </div>
+        </aside>
+        <div class="member-content">
+          <div class="member-title">
+            <input type="text" id="content-title" placeholder="搜尋商品...">
+            <button id="search-btn">搜尋</button>
+          </div>
+          <div class="member-body">
+            <div class="content-body" id="content-body">
+              <div class="pagination-controls" id="pagination-controls">
+                <button id="prev-page">上一页</button>
+                <button id="next-page">下一页</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div class="connection">
+          聯絡資訊：<i class="fa-brands fa-facebook fb-icon"></i>
+          <i class="fa-brands fa-line line-icon"></i>
+          <i class="fa-solid fa-envelope mail-icon"></i>
+        </div>
+        <div class="copyright-icon">&copy; 2024 Shang</div>
+      </div>
+    </footer>
+    <script src="../js/header.js"></script>
+    <script src="../js/shop.js"></script>
+    <script src="../js/footer.js"></script>
+    <script
+      src="https://kit.fontawesome.com/b564b46eba.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
