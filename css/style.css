@@ -494,81 +494,6 @@ main {
   height: 100%;
   justify-content: space-between;
 }
-/*------Member End------*/
-/*驗證相關*/
-.verification-options {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 80%;
-}
-
-.verification-button {
-  background-color: #333;
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 10px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  min-width: 200px;
-  max-width: 400px;
-  width: 50%;
-}
-
-.verification-button:hover {
-  background-color: #555;
-}
-
-.verification-form, .reset-password-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 80%;
-}
-
-.new-password{
-  font-family: "Noto Sans TC", sans-serif;
-  font-weight: bold;
-  font-size: 12px;
-  color: rgba(226, 34, 92, 0.781);
-}
-
-/*--------------Main End------------------*/
-
-/*--------------Footer Start------------------*/
-footer {
-  flex: 0 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 10vh;
-  max-height: 96px;
-  min-height: 60px;
-  background-color: #333;
-  color: #fff8f1;
-  z-index: 100;
-}
-
-.footer-container {
-  text-align: center;
-  font-size: 15px;
-   color: #fff8f1;
-}
-
-.fb-icon,
-.line-icon,
-.mail-icon {
-  margin: 0 5px;
-  cursor: pointer;
-  color: #fff8f1;
-}
-/*--------------Footer end------------------*/
 
 .trade-container {
   height: 100%;
@@ -697,3 +622,179 @@ footer {
     height: 100px;
     border-radius: 50%;
 }
+/*------Member End------*/
+
+/*------Shop Start------*/
+.menu-item.collapsible {
+  cursor: pointer;
+}
+
+.submenu {
+  display: none;
+  padding-left: 20px;
+}
+
+.submenu-item {
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+.submenu.active {
+  display: block;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.pagination-controls button {
+  background-color: #333;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.pagination-controls button:hover {
+  background-color: #555;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.product-card p {
+  font-size: 16px;
+  color: #555;
+}
+
+.product-card .price {
+  font-size: 20px;
+  color: #e28b18;
+}
+
+.product-card .quantity {
+  display: flex;
+  align-items: center;
+}
+
+.product-card .quantity input {
+  width: 50px;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.product-card button {
+  background-color: #333;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background-color: #555;
+}
+/*------Shop End------*/
+/*驗證相關*/
+.verification-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+}
+
+.verification-button {
+  background-color: #333;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  min-width: 200px;
+  max-width: 400px;
+  width: 50%;
+}
+
+.verification-button:hover {
+  background-color: #555;
+}
+
+.verification-form, .reset-password-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+}
+
+.new-password{
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  color: rgba(226, 34, 92, 0.781);
+}
+
+/*--------------Main End------------------*/
+
+/*--------------Footer Start------------------*/
+footer {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 10vh;
+  max-height: 96px;
+  min-height: 60px;
+  background-color: #333;
+  color: #fff8f1;
+  z-index: 100;
+}
+
+.footer-container {
+  text-align: center;
+  font-size: 15px;
+   color: #fff8f1;
+}
+
+.fb-icon,
+.line-icon,
+.mail-icon {
+  margin: 0 5px;
+  cursor: pointer;
+  color: #fff8f1;
+}
+/*--------------Footer end------------------*/
