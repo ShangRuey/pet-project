@@ -1,10 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
     <title>狗狗社群</title>
-  </head>
-  <body></body>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar"></nav>
+    </header>
+     <main>
+         <div class="main-container">
+            <div class="community-container">
+                <h2>狗狗社群</h2>
+                <div class="community-content">
+                   <button id="scroll-to-bottom" class="scroll-to-bottom">跳至最新訊息</button>
+                   <div class="content-container"></div>
+                   <div class="enter-container">
+                        <textarea id="message-input" placeholder="輸入訊息"></textarea>
+                        <button id="send-button">傳送</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="connection">
+                聯絡資訊：
+                <i class="fa-brands fa-facebook fb-icon"></i>
+                <i class="fa-brands fa-line line-icon"></i>
+                <i class="fa-solid fa-envelope mail-icon"></i>
+            </div>
+            <div class="copyright-icon">&copy; 2024 Shang</div>
+        </div>
+    </footer>
+    <div id="user-info-popup" class="user-info-popup">
+        <img id="user-info-img" src="" alt="User Image">
+        <div id="user-info-name">User Name</div>
+        <button id="chat-button">聊天</button>
+    </div>
+    <script src="../js/header.js"></script>
+    <script src="../js/community.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="https://kit.fontawesome.com/b564b46eba.js" crossorigin="anonymous"></script>
+</body>
 </html>
