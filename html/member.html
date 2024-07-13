@@ -4,16 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Roboto:wght@900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@800&display=swap"
-      rel="stylesheet"
-    />
     <title>會員中心</title>
   </head>
   <body>
@@ -39,15 +29,10 @@
               <form class="update-form">
                 <label class="update-label">會員ID：</label>
                 <input class="update-input" type="text">
-                <label class="update-label">密碼：</label>
-                <input class="update-input" type="text">
-                <button class="update-btn">更改密碼</button>
                 <label class="update-label">電子郵件：</label>
                 <input class="update-input" type="text">
-                <button class="update-btn">更改電子郵件</button>
                 <label class="update-label">手機：</label>
                 <input class="update-input" type="text">
-                <button class="update-btn">更改手機號碼</button>
                 <label class="update-label">城市</label>
                 <select class="update-select" required>
                   <option value="" selected>選擇城市</option>
@@ -65,6 +50,9 @@
                 </select>
                 <label class="update-label">詳細地址</label>
                 <input type="text" class="update-input" id="address" maxlength="12" pattern="[\u4e00-\u9fa5A-Za-z0-9]+" required/>
+                <label class="update-label">圖片</label>
+                <div><img src="" alt="頭像"></div>
+                <button>上傳</button>
                 <button class="update-btn" type="submit">修改</button>
               </form>
 

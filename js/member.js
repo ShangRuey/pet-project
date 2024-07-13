@@ -17,36 +17,34 @@ const contentMap = {
                 title: '修改會員資料',
                 body: `
                   <form class="update-form">
-                    <label class="update-label">會員ID：</label>
-                    <input class="update-input" type="text">
-                    <label class="update-label">密碼：</label>
-                    <input class="update-input" type="text">
-                    <button class="update-btn">更改密碼</button>
-                    <label class="update-label">電子郵件：</label>
-                    <input class="update-input" type="text">
-                    <button class="update-btn">更改電子郵件</button>
-                    <label class="update-label">手機：</label>
-                    <input class="update-input" type="text">
-                    <button class="update-btn">更改手機號碼</button>
-                    <label class="update-label">城市</label>
-                    <select class="update-select" required>
-                      <option value="" selected>選擇城市</option>
-                      <option value="">預設1</option>
-                    </select>
-                    <label class="update-label">區</label>
-                    <select class="update-select" required>
-                      <option value="">選擇區</option>
-                      <option value="">預設1</option>
-                    </select>
-                    <label class="update-label">路</label>
-                    <select class="update-select" required>
-                      <option value="">選擇路</option>
-                      <option value="">預設1</option>
-                    </select>
-                    <label class="update-label">詳細地址</label>
-                    <input type="text" class="update-input" id="address" maxlength="12" pattern="[\u4e00-\u9fa5A-Za-z0-9]+" required/>
-                    <button class="update-btn" type="submit">修改</button>
-                  </form>
+                <label class="update-label">會員ID：</label>
+                <input class="update-input" type="text">
+                <label class="update-label">電子郵件：</label>
+                <input class="update-input" type="text">
+                <label class="update-label">手機：</label>
+                <input class="update-input" type="text">
+                <label class="update-label">城市</label>
+                <select class="update-select" required>
+                  <option value="" selected>選擇城市</option>
+                  <option value="">預設1</option>
+                </select>
+                <label class="update-label">區</label>
+                <select class="update-select" required>
+                  <option value="">選擇區</option>
+                  <option value="">預設1</option>
+                </select>
+                <label class="update-label">路</label>
+                <select class="update-select" required>
+                  <option value="">選擇路</option>
+                  <option value="">預設1</option>
+                </select>
+                <label class="update-label">詳細地址</label>
+                <input type="text" class="update-input" id="address" maxlength="12" pattern="[\u4e00-\u9fa5A-Za-z0-9]+" required/>
+                <label class="update-label">圖片</label>
+                <div><img src="" alt="頭像"></div>
+                <button>上傳</button>
+                <button class="update-btn" type="submit">修改</button>
+              </form>
                 `
               },
               community: {
@@ -74,6 +72,19 @@ const contentMap = {
                     </div>
                   </div>
                 `
+              },
+              updatePassword: {
+                title: '修改密碼',
+                body: `
+                  <div class="trade-container">
+                    <div class="trade-content"></div>
+                    <div class="pagination-controls">
+                      <button id="prev-page">上一頁</button>
+                      <span id="pagination-buttons"></span>
+                      <button id="next-page">下一頁</button>
+                    </div>
+                  </div>
+                `
               }
             };
 
@@ -89,6 +100,8 @@ const contentMap = {
                     renderTransactions(currentPage);
                 } else if (contentKey === 'community') {
                     renderFollowers(currentPage);
+                } else if (contentKey === 'updatePassword'){
+                  renderPassword(currentPage);
                 }
             }
         });
