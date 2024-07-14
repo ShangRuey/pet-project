@@ -15,9 +15,8 @@ function displayHeader() {
       </p>
     </div>
     <div class="function-column">
-      <div class="menu-toggle">        
-        <p class="menu-login">登入</p>
-        <p class="menu-register">註冊</p>
+      <div class="menu-toggle">
+        <img class="menu-img" src="../image/ele.jpg" alt="logo" />
       </div>
       <div class="menu-items">
         <div class="pet-shop">用品商店</div>
@@ -29,12 +28,10 @@ function displayHeader() {
     </div>`;
 }
 
-displayHeader();
 
 // 事件處理函數
 function handleNavigation(event) {
   const className = event.target.className;
-
   switch (className) {
     case "logo-item":
       navigateTo("./index.html");
@@ -54,16 +51,14 @@ function handleNavigation(event) {
     case "member-center":
       navigateTo("./member.html");
       break;
-    case "menu-login":
-      navigateTo("./login.html");
+    case "menu-img":
+      navigateTo("./member.html");
       break;
-    case "menu-register":
-      navigateTo("./register.html");
-      break;  
     default:
       console.log("nothing");
   }
 }
-
 // 事件委託: 將事件監聽添加到 navBar
 navBar.addEventListener("click", handleNavigation);
+
+displayHeader();
