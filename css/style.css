@@ -139,21 +139,20 @@ header {
     height: 80%;
   }
   .menu-img{
-    width: auto;
-    height: 80%;
-    border-radius: 90%;
-  }
-  .menu-register,
-  .menu-login{
-    margin: 0;
-    text-align: center;
-    font-size: 20px;
-  }
-  .menu-login:hover,.menu-register:hover {
-    color: #e28b18;
-    background-color: rgba(250, 243, 140, 0.918);
-    box-shadow: 0 0 50px rgba(226, 211, 2, 0.918);
+    width: 50%;
+    height: 50%;
     border-radius: 50%;
+    min-width: 41px;
+    max-width: 41px;
+    min-height: 41px;
+    max-height: 41px;
+  }
+  .menu-img:hover{
+    cursor: pointer;
+    min-width: 60px;
+    max-width: 60px;
+    min-height: 60px;
+    max-height: 60px;
   }
 }
 /*--------------Header End------------------*/
