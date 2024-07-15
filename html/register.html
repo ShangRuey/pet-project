@@ -16,6 +16,8 @@
       <div class="form-container">
         <form class="register-form" id="register-form">
           <h2 class="register-title">註冊會員</h2>
+          <span class="text-notice">(*必填)</span>
+          <span class="result-default" id="register-result"></span>
           <div class="error-message"></div>
         
           <!-- Username Field -->
@@ -23,14 +25,14 @@
             帳號
             <span class="required">*</span>
           </label>
-          <input type="text" id="username" maxlength="14" pattern="[A-Za-z0-9]+" class="register-input" required />
+          <input type="text" class="register-input" id="username" maxlength="14" minlength="4" pattern="[A-Za-z0-9]+" placeholder="大小寫字母或數字、長度4-14字數" required/>
 
           <!-- Password Field -->
           <label for="password" class="register-label">
             密碼
             <span class="required">*</span>
           </label>
-          <input type="password" id="password" pattern="[A-Za-z0-9]{1,16}" maxlength="16" title="由大小寫字母或數字、長度在1-16字數" class="register-input" required />
+          <input type="password" class="register-input" id="password" pattern="[A-Za-z0-9]+" maxlength="16" minlength="4" placeholder="大小寫字母或數字、長度4-16字數" required />
 
           <!-- Email Field -->
           <label for="email" class="register-label">
@@ -39,11 +41,11 @@
             <span id="email-verification-icon"></span>
           </label>
           <div class="email-verification">
-            <input type="email" id="email" maxlength="30" class="register-input" pattern="[A-Za-z0-9@.]+" required />
-            <button type="button" id="email-verify-btn" class="register-ver">發送</button>
+            <input type="email" class="register-input" id="email" maxlength="30" pattern="[A-Za-z0-9@.]+" placeholder="請輸入" required />
+            <button type="button" class="register-ver" id="email-verify-btn">發送</button>
           </div>
           <div class="email-code-verification">
-            <input type="text" id="email-code" maxlength="6" class="register-input" pattern="[0-9]{6}" />
+            <input type="text" class="register-input" id="email-code" pattern="[0-9]+" placeholder="請輸入"/>
             <button type="button" id="email-code-verify-btn" class="register-ver">驗證</button>
           </div>
 
@@ -54,12 +56,12 @@
             <span id="phone-verification-icon"></span>
           </label>
           <div class="phone-verification">
-            <input type="tel" id="phone" maxlength="10" class="register-input" pattern="^09\d{8}$" title="手機需以09開頭，共10位數" required/>
+            <input type="text" class="register-input" id="phone" maxlength="10" minlength="10"pattern="^09\d{8}$" title="手機需以09開頭，共10位數" placeholder="請輸入" required/>
             <button type="button" id="phone-verify-btn" class="register-ver">發送</button>
           </div>
           <div class="phone-code-verification">
-            <input type="text" id="phone-code" maxlength="6" class="register-input" pattern="[0-9]{6}" />
-            <button type="button" id="phone-code-verify-btn" class="register-ver">驗證</button>
+            <input type="text" class="register-input" id="phone-code" pattern="[0-9]+" placeholder="請輸入"/>
+            <button type="button" class="register-ver" id="phone-code-verify-btn" >驗證</button>
           </div>
 
           <!-- City Dropdown -->
@@ -68,8 +70,7 @@
             <span class="required">*</span>
           </label>
           <select class="register-input" required>
-            <option value="" selected>選擇城市</option>
-            <option value="">預設1</option>
+            <option value="預設1" selected>預設1</option>
             <!-- Add more options as needed -->
           </select>
 
@@ -79,8 +80,7 @@
             <span class="required">*</span>
           </label>
           <select class="register-input" required>
-            <option value="">選擇區</option>
-            <option value="">預設1</option>
+            <option value="預設1" selected>預設1</option>
             <!-- Add more options as needed -->
           </select>
 
@@ -90,8 +90,7 @@
             <span class="required">*</span>
           </label>
           <select class="register-input" required>
-            <option value="">選擇路</option>
-            <option value="">預設1</option>
+            <option value="預設1" selected>預設1</option>
             <!-- Add more options as needed -->
           </select>
 
@@ -100,7 +99,7 @@
             詳細地址 
             <span class="required">*</span>
           </label>
-          <input type="text" id="address" maxlength="12" pattern="[\u4e00-\u9fa5A-Za-z0-9]+" class="register-input" required/>
+          <input type="text" class="register-input" id="address" maxlength="20" pattern="[\u4e00-\u9fa5A-Za-z0-9]+" placeholder="請輸入" required/>
 
           <!-- Submit Button -->
           <button type="submit" class="register-submit">註冊</button>
