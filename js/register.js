@@ -102,9 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
       phoneVerificationIcon.innerHTML = '<i class="fa fa-check success-icon">發送驗證</i>';
     } else {
       phoneVerificationIcon.innerHTML = '<i class="fa fa-times error-icon">規格有誤</i>';
-      setTimeout(() => {
-        phoneVerificationIcon.innerHTML = '';
-      }, 5000);
     }
   }
 
