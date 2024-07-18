@@ -21,7 +21,7 @@ loginForm.addEventListener('submit', (event) =>{
     setCookie('authkey', authkey)
     */
     //跳轉回前網頁
-    window.history.back();    
+    window.location.href="../html/index.html";
   }
   else{
     console.log("登入失敗")
