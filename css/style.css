@@ -172,7 +172,7 @@ main {
 
 .image-map-container img {
   position: absolute;
-  object-fit: contain;
+  /*object-fit: contain;*/
 }
 
 .image-shop,.image-map,.image-adopt,.image-community{
@@ -180,6 +180,7 @@ main {
   box-sizing: border-box;
   width: 20%;
   height: 40%;
+  cursor: pointer;
 }
 
 .image-shop {
@@ -203,14 +204,80 @@ main {
 }
 
 .image-dog {
+  /*border: #333 solid 5px;*/
   box-sizing: border-box;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 25%;
-  height: 90%;
+  max-height: 90%;
+  cursor: pointer;
+}
+
+.image-map-rwd{
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.image-dog:hover, .image-shop:hover, .image-map:hover, .image-adopt:hover, .image-community:hover{
+  background-color: rgba(255, 209, 139, 0.318);
+  box-shadow: 0 0 50px rgba(255, 209, 139, 0.718);
+}
+
+@media screen and (max-width: 1024px) {
+
+  .image-map-container{
+    display: none;
+  }
+  .image-map-rwd{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .image-map-rwd-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 20%;
+    width: 100%;
+    max-height: 20%;
+    border: 3px solid #27ffe51a;
+    box-sizing: border-box;
+    background: #d9ffd64f;
+    cursor: pointer;
+  }
+  .image-map-rwd-item:hover{
+    background: #dcff474f
+  }
+  .map-rwd-img{
+    width: 20%;
+    height: 80%;
+  }
+  .map-rwd-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .map-rwd-des p{
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 35px;
+    color: #ca9a17ab;
+  }
+  .map-rwd-des{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+  }
+
 }
 /*------Index End------*/
+
 /*------Register Login Start------*/
 .center-wrapper {
   display: flex;
