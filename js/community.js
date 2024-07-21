@@ -5,6 +5,22 @@
     const userInfoPopup = document.getElementById('user-info-popup');
     const chatButton = document.getElementById('chat-button');
     const scrollToBottomButton = document.getElementById('scroll-to-bottom');
+    const fallowButton = document.getElementById('fallow-button');
+    
+
+    //追隨功能
+    let isFallow = false;
+    fallowButton.addEventListener('click', () => {
+        console.log(isFallow)
+        if (!isFallow){
+            isFallow = true;
+            fallowButton.innerText = '已追隨';
+        }else {
+            isFallow = false;
+            fallowButton.innerText = '追隨';
+        }
+        
+    })
 
     //新增聊天內容
     sendButton.addEventListener('click', () => {
