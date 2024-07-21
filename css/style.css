@@ -1084,9 +1084,15 @@ footer {
 }
 
 .user-info-popup #user-info-name {
+    display: flex;
+    flex-direction: column;
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
+}
+
+#user-info-name button {
+    margin-top: 5px;
 }
 
 .scroll-to-bottom {
