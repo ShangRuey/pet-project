@@ -13,18 +13,82 @@
     </header>
     <main>
       <div class="main-container">
-        <section class="adopt-container">
+        <div class="adopt-container">
           <div class="adopt-title">
             <h2>動物認領養</h2>
           </div>
           <div class="adopt-search">
-            <div class="search-item">123</div>
-            <div class="search-item">123</div>
-            <div class="search-item">123</div>
-            <div class="search-item">123</div>
+            <div class="search-title">選擇搜尋資料</div>
+            <div class="search-item">
+              <span>所屬縣市</span>
+              <select id="area-select">
+                <option value="">請選擇</option>
+              </select>
+            </div>
+            <div class="search-item">
+              <span>收容所</span>
+              <select id="shelter-select">
+                <option value="">請選擇</option>
+              </select>
+            </div>
+            <div class="search-item">
+              <span>性別</span>
+              <select id="sex-select">
+                <option value="">請選擇</option>
+              </select>
+            </div>
+            <div class="search-item">
+              <span>年齡</span>
+              <select id="age-select">
+                <option value="1">預設1</option>
+              </select>
+            </div>
+            <button class="search-btn">查詢</button>
           </div>
-          <div class="adopt-content">render</div>
-        </section>
+          <div class="adopt-content">
+            <!-- 動態渲染 render-item
+              <div class="render-item">
+                  <div class="pet-img">
+                    <img src="../image/ele.jpg" alt="dog">
+                  </div>
+                  <span class="render-dog">性別：公</span>
+                  <span class="render-dog">體型：小</span>
+                  <span class="render-dog">地點：新北市政府動物保護防疫處</span>
+              </div>
+            -->
+          </div>
+          <div class="adopt-detail">
+            <div class="detail-title">
+              <h2>動物資料</h2>
+            </div>
+            <div class="detail-container">
+              <!--
+              <div class="detail-img"><img src="../image/ele.jpg" alt="圖片"></div>
+              <div class="detail-item">
+                <div class="sub-title">動物狀態</div>
+                <div class="sub-content">預設</div>
+                <div class="sub-title">收容編號</div>
+                <div class="sub-content">預設</div>
+                <div class="sub-title">體型</div>
+                <div class="sub-content">預設</div>
+                <div class="sub-title">性別</div>
+                <div class="sub-content">預設</div>
+                <div class="sub-title">毛色</div>
+                <div class="sub-content">預設</div>
+                <div class="sub-title">是否施打狂犬病疫苗</div>
+                <div class="sub-content">預設</div>
+                <div class="sub-title">所屬收容所名稱</div>
+                <div class="sub-content">預設</div>
+                <div class="sub-title">聯絡電話</div>
+                <div class="sub-content">預設</div>
+                <div class="sub-title">地址</div>
+                <div class="sub-content">預設</div>
+              </div>
+              -->
+            </div>
+            <button class="adopt-btn">有意願認養</button>
+          </div>
+        </div>
       </div>
     </main>
     <footer>
@@ -37,6 +101,7 @@
         <div class="copyright-icon">&copy; 2024 Shang</div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="../js/header.js"></script>
     <script src="../js/adopt.js"></script>
     <script src="../js/footer.js"></script>
