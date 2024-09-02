@@ -885,7 +885,6 @@ footer {
 /* adopt start */
 .adopt-container{
   box-sizing: border-box;
-  border: 5px solid black;
   width: 90%;
   height: 100%;
   transform: translateX(5%);
@@ -893,11 +892,14 @@ footer {
   flex-direction: column;
   align-items: center;
 }
-.major-title{
-  width: 80%;
+.adopt-title{
+  margin-top: 5px;
   height: auto;
+  width: 60%;
   text-align: center;
-  width: fit-content;
+  background-color: #9ffff638;
+  border: 5px solid #00807a2e;
+  border-radius: 10px;
 }
 .adopt-title h2{
   width: 100%;
@@ -907,13 +909,262 @@ footer {
 }
 .adopt-search{
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  width: 80%;
+  width: auto;
+  min-width: 400px;
   height: auto;
+  border: 5px solid #00807a2e;
+  padding: 10px 0;
+  background-color: #9ffff638;
+  border-radius: 10px;
+}
+.search-title, .search-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poetsen One";
+  font-weight: bold;
+  flex-wrap: wrap;
+}
+.search-title{
+  width: 100%;
+  font-size: 30px;
+  margin-bottom: 10px;
 }
 .search-item{
   width: 50%;
+  font-size: 20px;
+  margin: 5px 0;
 }
+.search-item span{
+  margin-right: 10px;
+}
+.search-item select{
+  width: auto;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-family: "Poetsen One";
+  font-size: 20px;
+  text-align: center;
+  appearance:none;
+  -moz-appearance:none; /* Firefox */
+  -webkit-appearance:none; /* Safari 和 Chrome */
+  background: #ffffff6e;
+}
+
+.search-btn{
+  width: 20%;
+  padding: 5px 0;
+  font-size: 20px;
+  font-family: "Poetsen One";
+  font-weight: bold;
+  border-radius: 10px;
+  border: 2px solid #00000057;
+  background-color: rgb(0 0 0 / 53%);
+  color:#8fbbff
+}
+.search-btn:hover{
+  cursor: pointer;
+  color:#8fbbff;
+  background-color: rgba(0, 0, 0, 0.836);
+}
+
+.adopt-content{
+  display: flex;
+  width: 100%;
+  background-color: #9ffff638;
+  border: 5px solid #00807a2e;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 50px 0;
+}
+.render-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 10px solid #e0e4e978;
+  width: 20%;
+  margin: 10px;
+  min-height: 300px; /* 設置最小高度 */
+  background: #e0e4e96e;
+  font-family: "Poetsen One";
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.pet-img {
+  width: 100%;
+  height: 200px; /* 固定高度 */
+  overflow: hidden; /* 防止圖片溢出 */
+  cursor: pointer;
+}
+
+.pet-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.render-dog {
+  width: 100%;
+  text-align: center;
+  padding: 3px 0;
+  box-sizing: border-box;
+}
+
+/* 特別處理地點資訊 */
+.render-dog:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-wrap: break-word; /* 允許長單詞換行 */
+  word-break: break-all; /* 在任何字符間換行 */
+}
+
+/* 分頁器 Start*/
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 ;
+  flex-wrap: wrap;
+}
+
+.pagination-container button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+
+.pagination-container button.active {
+  background-color: #007bff;
+  color: white;
+}
+/* 分頁器 End*/
+
+/*彈跳視窗 Start*/
+.adopt-detail{
+  display: none;
+  position: absolute;
+  border: 6px solid rgba(209, 209, 209, 0.6);
+  width: 95%;
+  top: 10%;
+  background: #dbe0e5f5;
+  border-radius: 2%;
+  flex-direction: column;
+  padding: 0px 5px 5px;
+  align-items: center;
+}
+.detail-title{
+  position: relative;
+  top: -10px;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(60deg, #51A8DD, #1572ac);
+  font-family: "Poetsen One";
+  font-size: 20px;
+  color: #ffffffed;
+}
+.detail-container{
+  display: flex;
+  width: 95%;
+  margin: 10px;
+}
+.detail-img{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  margin: 0px 50px 0px 0px;
+  align-items: center;
+}
+.detail-img img{
+  width: 100%;
+  height: 60%;
+  border: 10px solid #fdb67e87;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.detail-item{
+  display: flex;
+  width: 50%;
+  flex-wrap: wrap;
+}
+.sub-title{
+  width: 100%;
+  font-family: "Poetsen One";
+  font-weight: bold;
+  color: #9e5f10d4;
+  font-size: 30px;
+}
+.sub-content{
+  width: 100%;
+  font-family: "Poetsen One";
+  font-weight: bold;
+  color: #2a2a2abd;
+  font-size: 25px;
+  margin: 5px 0;
+}
+.adopt-btn{
+  width: 40%;
+  height: 5%;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(185deg, #ffab7a, #b35447);
+  cursor: pointer;
+  font-family: "Poetsen One";
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+}
+.adopt-btn:hover{
+  color: #5a5a5a;
+}
+    /*彈跳視窗 End*/
+
+@media screen and (max-width: 850px) {
+  .adopt-title{
+    width: 80%;
+  }
+  .adopt-search{
+    width: 100%;
+    min-width: 100%;
+  }
+  .search-item{
+    width: 100%;
+  }
+  .render-item{
+    width: 40%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .render-item{
+    width: 100%;
+  }
+  .adopt-detail{
+    top: 10%;
+  }
+  .detail-container{
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-around;
+  }
+  .detail-img{
+    margin: 0;
+    width: 100%;
+    height: 30%;
+  }
+  .detail-img img{
+    height: 100%;
+  }
+  .detail-item{
+    width: 100%;
+  }
+}        
 /* adopt end*/
 
 /* community start */
