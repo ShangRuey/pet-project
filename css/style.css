@@ -708,103 +708,289 @@ main {
 /*------Member End------*/
 
 /*------Shop Start------*/
-.menu-item.collapsible {
-  cursor: pointer;
-}
-
-.submenu {
-  display: none;
-  padding-left: 20px;
-}
-
-.submenu-item {
-  cursor: pointer;
-  padding: 5px 0;
-}
-
-.submenu.active {
-  display: block;
-}
-
-.pagination-controls {
-  display: flex;
-  justify-content: center;
-  margin: 10px 0;
-}
-
-.pagination-controls button {
-  background-color: #333;
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 0 5px;
-}
-
-.pagination-controls button:hover {
-  background-color: #555;
-}
-
-.product-card {
+.main-container {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 500;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 200px;
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.product-card img {
+.shop-nav {
+  margin: 0;
   width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.product-card h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 10px 0;
-}
-
-.product-card p {
-  font-size: 16px;
-  color: #555;
-}
-
-.product-card .price {
-  font-size: 20px;
-  color: #e28b18;
-}
-
-.product-card .quantity {
+  min-height: 50px;
+  max-height: 10%;
+  border-bottom: 4px solid #cccccc61(7 209 192 / 18%);
+  background-color: rgb(7 209 192 / 18%);
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
+  list-style: none;
+  box-shadow: 3px 3px 50px #00000057;
 }
-
-.product-card .quantity input {
-  width: 50px;
-  text-align: center;
-  margin: 0 10px;
-}
-
-.product-card button {
-  background-color: #333;
-  color: white;
-  font-size: 16px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
+.shop-item {
+  position: relative;
   cursor: pointer;
 }
+.shop-item-title {
+  font-size: 20px;
+}
+.shop-item a{
+  text-decoration: none;
+  color: inherit;
+}
+.shop-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0; /* 初始寬度設置為 0 */
+  height: 2px; /* 底線的厚度 */
+  background-color: #9e8c23f8; /* 底線顏色 */
+  transition: width 0.4s ease; /* 設定動畫效果 */
+}
 
-.product-card button:hover {
-  background-color: #555;
+.shop-item:hover::after {
+  width: 100%; /* 鼠標懸停時展開底線到整個元素的寬度 */
+}
+.shop-sub-nav {
+  list-style: none;
+  position: absolute; /* 讓下拉選單浮動 */
+  top: 120%; /* 將子選單顯示在父項目正下方 */
+  left: -20%; /* 將子選單對齊到左邊 */
+  background-color: #ffffffcc;
+  padding: 10px;
+  border: 3px solid #cccccc61;
+  border-radius: 10px;
+  z-index: 1; /* 確保下拉選單顯示在其他內容上方 */
+  width: 180px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.shop-sub-item {
+  margin: 0 0 10px;
+}
+.shop-item:hover .shop-sub-nav, .shop-sub-nav:hover {
+  opacity: 1;
+  visibility: visible;
+}
+.shop-sub-item a:hover {
+  color: rgb(202, 144, 57);
+}
+
+/*圖片牆*/
+.shop-img-wall {
+  position: relative; /* 使圖片層疊在容器內 */
+  width: 80%;
+  height: 60%;
+  margin: 30px 0;
+  overflow: hidden; /* 隱藏超出容器的內容 */
+  border-radius: 5px;
+  background-color: rgb(255 197 109 / 46%);;
+  box-shadow: 5px 1px 10px 20px rgb(255 197 109 / 46%);
+  max-width: 600px;
+  min-width: 300px;
+  max-height: 400px;
+  min-height: 300px;
+}
+.wall-image {
+  position: absolute; /* 確保圖片堆疊在同一位置 */
+  width: 100%; /* 根據容器調整寬度 */
+  height: 100%; /* 根據容器調整高度 */
+  object-fit: contain; /* 確保圖片覆蓋容器 */
+  opacity: 0; /* 默認隱藏 */
+  transition: opacity 0.5s ease; /* 淡入淡出效果 */
+}
+
+.wall-image.active {
+  opacity: 1;
+}
+
+.prev-btn, .next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgb(85, 248, 194);
+  border-radius: 20px;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0px -10px;
+  z-index: 10;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+/*商店商品*/
+/* 商店商品容器 */
+.shop-item-container {
+  width: 90%;
+  height: auto; /* 根據內部內容自動調整高度 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* 適當的間距 */
+}
+
+/* 單個分類容器 */
+.shop-category-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.category-title {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0px 20px;
+  font-size: 25px;
+  color:#7c493b;
+}
+
+/* 內部項目容器 */
+.category-item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px; /* 使項目間有些間距 */
+  justify-content: center;
+}
+
+/* 單個商品 */
+.sell-item {
+  width: 23%;
+  text-align: center;
+  text-decoration: none;
+  color:#7c493b;
+  font-weight: 400;
+  font-size: 15px;
+  background-color: rgb(255 197 109 / 30%);
+  border-radius: 10px;
+}
+
+/* 圖片容器 */
+.item-img-container {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3; /* 使用 aspect-ratio 保持圖片比例 */
+  overflow: hidden; /* 防止圖片超出容器 */
+}
+
+/* 圖片 */
+.item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 保持圖片比例並完整呈現 */
+  border-radius: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.item-img-container:hover .item-img {
+  transform: scale(1.1); /* 鼠標懸停時圖片放大 1.1 倍 */
+  filter: brightness(75%); /* 同時讓圖片變暗 */
+}
+
+/* 商品標題 */
+.item-title {
+  width: 100%;
+  height: auto;
+  margin: 20px 0px;
+  font-size: 1.2em;
+  flex-wrap: wrap;
+  word-wrap: break-word;  /* 讓長詞換行 */
+  white-space: normal;  /* 讓文本正常換行 */
+    /* 添加內邊距，防止文字太靠近邊緣 */
+}
+
+/* RWD側邊欄樣式 */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px; /* 初始位置在畫面外 */
+  width: 250px;
+  height: 100%;
+  background-color: rgba(161, 99, 6, 0.9);
+  padding: 20px;
+  box-shadow: 3px 0 10px rgba(223, 180, 115, 0.9);
+  transition: left 0.4s ease, opacity 0.4s ease; /* 滑動和淡入效果 */
+  opacity: 0; /* 初始時不可見 */
+  z-index: 1000;
+}
+
+.sidebar.active {
+  left: 0; /* 滑出側邊欄 */
+  opacity: 1; /* 變得可見 */
+}
+
+.sidebar-nav {
+  padding-left: 20px;
+}
+
+/* RWD主分類樣式 */
+.sidebar-item {
+  position: relative;
+  margin-bottom: 20px;
+  list-style: none;
+}
+
+.sidebar-item-title {
+  font-size: 18px;
+  color: #c4ff3a;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.sidebar-item span {
+  cursor: pointer;
+  font-size: 16px;
+  color: #000000c2;
+}
+
+/* RWD子分類的樣式 */
+.sidebar-sub-nav {
+  list-style: none;
+  padding-left: 20px;
+  display: none; /* 預設隱藏 */
+}
+
+.sidebar-sub-nav li {
+  margin: 5px 0;
+}
+
+.sidebar-sub-item a {
+  text-decoration: none;
+  color: #fff3af;
+}
+
+.sidebar-sub-item a:hover {
+  color: #bbff83;
+}
+
+/*RWD 商品分類*/
+.nav-toggle {
+  cursor: pointer;
+  font-size: 24px;
+  background: none;
+  border: none;
+  padding: 10px;
+  font-weight: 800;
+}
+/*RWD 的 導覽列*/
+.rwd-nav {
+  display: none;
 }
 /*------Shop End------*/
 /*驗證相關*/
@@ -1139,6 +1325,35 @@ footer {
   }
   .render-item{
     width: 40%;
+  }
+
+  /*RWD-SHOP*/
+  .shop-nav{
+    display: none;
+  }
+  .rwd-nav{
+    display: flex;
+    width: 100%;
+    min-height: 50px;
+    max-height: 10%;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 20px;
+    border-bottom: 4px solid #cccccc61(7 209 192 / 18%);
+    background-color: rgb(7 209 192 / 18%);
+    box-shadow: 3px 3px 50px #00000057;
+  }
+  .shop-item-title{
+    color: black;
+    text-decoration: none;
+  }
+  .nav-toggle:hover, .cart-icon:hover, .cart-icon:hover a{
+    color: rgb(185, 143, 52);
+  }
+
+  /*商品render*/
+  .sell-item {
+  width: 45%;
   }
 }
 @media screen and (max-width: 400px) {

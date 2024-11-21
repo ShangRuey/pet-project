@@ -13,28 +13,144 @@
     </header>
     <main>
       <div class="main-container">
-        <aside class="aside-container">
-          <div class="function-aside">
-                <div class="menu-item collapsible" data-content="category1">種類1</div>
-                <div class="submenu">
-                    <div class="submenu-item" data-content="category1-1">種類1-1</div>
-                    <div class="submenu-item" data-content="category1-2">種類1-2</div>
+        <!--RWD 導覽列-->
+        <div class="rwd-nav">
+          <button class="nav-toggle">
+            商品分類
+            <span class="fa-solid fa-bars"></span>
+          </button>
+          <div class="cart-icon">
+            <a href="./index.html" class="shop-item-title">Cart</a>
+            <span class="fa-solid fa-cart-shopping"></span> <!-- 購物車圖標 -->
+          </div>
+        </div>
+        <!-- RWD 側邊欄 -->
+        <div class="sidebar">
+          <ul class="sidebar-nav">
+            <li class="sidebar-item">
+              <a href="./index.html" class="sidebar-item-title">【生肉主食】</a>
+              <span class="fa-solid fa-v"></span>
+              <ul class="sidebar-sub-nav">
+                <li class="sidebar-sub-item">
+                  <a href="./index.html">【生肉主食】試吃組</a>
+                </li>
+                <li class="sidebar-sub-item">
+                  <a href="./index.html">【生肉主食】300g</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a href="./index.html" class="sidebar-item-title">【零食系列】</a>
+              <span class="fa-solid fa-v"></span>
+              <ul class="sidebar-sub-nav">
+                <li class="sidebar-sub-item">
+                  <a href="./index.html">【零食系列】雞肉</a>
+                </li>
+                <li class="sidebar-sub-item">
+                  <a href="./index.html">【零食系列】牛肉</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!--一般導覽列-->
+        <ul class="shop-nav">
+          <li class="shop-item">
+            <a href="./index.html" class="shop-item-title">【生肉主食】</a>
+            <span class="fa-light fa-v"></span>
+            <ul class="shop-sub-nav">
+              <li class="shop-sub-item">
+                <a href="./index.html">【生肉主食】試吃組</a>
+              </li>
+              <li class="shop-sub-item">
+                <a href="./index.html">【生肉主食】300g</a>
+              </li>
+            </ul>
+          </li>
+          <li class="shop-item">
+            <a href="./index.html" class="shop-item-title">【零食系列】</a>
+            <span class="fa-light fa-v"></span>
+            <ul class="shop-sub-nav">
+              <li class="shop-sub-item">
+                <a href="./index.html">【零食系列】雞肉</a>
+              </li>
+              <li class="shop-sub-item">
+                <a href="./index.html">【零食系列】牛肉</a>
+              </li>
+            </ul>
+          </li>
+          <div class="shop-item">
+            <a href="./index.html" class="shop-item-title">Cart </a>
+            <span class="fa-solid fa-cart-shopping"></span>
+          </div>
+        </ul>
+        <!--圖片牆-->
+        <div class="shop-img-wall">
+          <button class="prev-btn">
+            <span class="fa-solid fa-left-long"></span>
+          </button>
+          <a href="">
+            <img src="../image/ele.jpg" alt="Image 1" class="wall-image active">
+          </a>
+          <a href="">
+            <img src="../image/ele2.jpg" alt="Image 2" class="wall-image">
+          </a>
+          <button class="next-btn">
+            <span class="fa-solid fa-right-long"></span>
+          </button>
+        </div>
+        <!--商品展示-->
+        <div class="shop-item-container">
+          <div class="shop-category-item">
+            <h5 class="category-title">【生肉主食】</h5>
+            <div class="category-item">
+              <a href="../html/index.html" class="sell-item">
+                <div class="item-img-container">
+                  <img src="../image/ele2.jpg" alt="該品項圖片" class="item-img">
                 </div>
-                <div class="menu-item" data-content="category2">種類2</div>
-                <div class="menu-item" data-content="category3">種類3</div>
+                <p class="item-title">生肉生食【試吃組】</p>
+              </a>
+              <a href="../html/index.html" class="sell-item">
+                <div class="item-img-container">
+                  <img src="../image/ele2.jpg" alt="該品項圖片" class="item-img">
+                </div>
+                <p class="item-title">生肉生食【300g】</p>
+              </a>
+              <a href="../html/index.html" class="sell-item">
+                <div class="item-img-container">
+                  <img src="../image/ele2.jpg" alt="該品項圖片" class="item-img">
+                </div>
+                <p class="item-title">生肉生食【試吃組】</p>
+              </a>
+              <a href="../html/index.html" class="sell-item">
+                <div class="item-img-container">
+                  <img src="../image/ele2.jpg" alt="該品項圖片" class="item-img">
+                </div>
+                <p class="item-title">生肉生食【試吃組】</p>
+              </a>
+              <a href="../html/index.html" class="sell-item">
+                <div class="item-img-container">
+                  <img src="../image/ele2.jpg" alt="該品項圖片" class="item-img">
+                </div>
+                <p class="item-title">生肉生食【試吃組】</p>
+              </a>
+            </div>
           </div>
-        </aside>
-        <div class="member-content">
-          <div class="member-title">
-            <input type="text" id="content-title" placeholder="搜尋商品...">
-            <button id="search-btn">搜尋</button>
-          </div>
-          <div class="member-body">
-            <div class="content-body" id="content-body">
-              <div class="pagination-controls" id="pagination-controls">
-                <button id="prev-page">上一页</button>
-                <button id="next-page">下一页</button>
-              </div>
+          <div class="shop-category-item">
+            <h5 class="category-title">【零食系列】</h5>
+            <div class="category-item">
+              <a href="../html/index.html" class="sell-item">
+                <div class="item-img-container">
+                  <img src="../image/ele2.jpg" alt="該品項圖片" class="item-img">
+                </div>
+                <p class="item-title">零食系列【雞肉】</p>
+              </a>
+              <a href="../html/index.html" class="sell-item">
+                <div class="item-img-container">
+                  <img src="../image/ele2.jpg" alt="該品項圖片" class="item-img">
+                </div>
+                <p class="item-title">零食系列【牛肉】</p>
+              </a>
             </div>
           </div>
         </div>
